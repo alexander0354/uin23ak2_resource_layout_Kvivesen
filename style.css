@@ -57,11 +57,11 @@ text-transform: uppercase;
 }
 
 /*hover*/
-nav button:hover{
+/*nav button:hover{
     color: var(--black);
     border-color: var(--aquablue);
     background: var(--aquablue);
-}
+}*/
 
 #subMenu{
     display: flex;
@@ -73,14 +73,14 @@ div.open{
 }
 
 /*hover*/
-.MenuItem:hover .open{
+/*.MenuItem:hover .open{
     position: fixed;
     top: auto;
     display: block;
     padding: 1rem;
     border-style: solid;
     width: 75.54%;
-}
+}*/
 
 @media screen and (max-width: 900px) {
 
