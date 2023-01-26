@@ -8,6 +8,13 @@
     --maxwidth: 1200px;
 }
 
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-style: solid;
+}
+
 body{
     height: 100%;
     margin: 3%;
@@ -22,22 +29,19 @@ div.container{
     overflow: hidden;
 }
 
-header{
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
-    border-style: solid;
-}
-
 #menu {  
     position: fixed;
     right: 0;
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 nav{
    position: relative;
-    left: 107px;
+    left: -330px;
     width: 100%;
     background-color: var(--with);
     display: flex;
@@ -68,6 +72,11 @@ nav button:hover{
 
 div.open{
     display: none;
+}
+
+.MenuItem {
+    max-width: 20%;
+    float: left;
 }
 
 /*hover*/

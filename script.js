@@ -101,7 +101,7 @@ const resources = [
 ]
 
 
-let Menu = ``;
+/*let Menu = ``;
 
     resources.map((resources) => {
         
@@ -130,7 +130,46 @@ let Menu = ``;
     <ul>
       
         ${Menu}
-    </ul>`;
+    </ul>`;*/
+
+    let Menu = ``;
+
+resources.map((resources) => {
+    
+    let subMenu = ``;
+    resources.sources.forEach((item) => {
+      subMenu += `
+    <li><a target="_blank" href=${item.url}>${item.title}</a></li>`;
+
+    });
+    
+    Menu += `
+    <section class="MenuItem">
+    <button onclick="toggleMenu()">${resources.category}</button>
+      <div class="open">
+      <p class="text1">${resources.text1}</p> 
+      <p class="text">${resources.text}</p>
+      <ul class="subMenu">
+            ${subMenu}
+      </ul>
+      </div>
+  </section>`;
+
+});
+
+menu.innerHTML = `
+<ul>
+  
+    ${Menu}
+</ul>`;
+
+// Toggle menu function
+function toggleMenu() {
+  const menuItems = document.querySelectorAll('.MenuItem');
+  menuItems.forEach(item => {
+    item.classList.toggle('open');
+  });
+}
 
     /*let menu = document.querySelector('#menu');
     let Menu = ``;
