@@ -1,7 +1,6 @@
 const resources = [
     {
-        category: "KATEGORI 1",
-        text1:"HTML",
+        category: "HTML",
         text: "HTML står for HyperText Markup Language, og er et strukturspråk som brukes for å lage strukturer til nettside- og applikasjonsgrensesnitt.",
         sources: [
             {
@@ -19,8 +18,7 @@ const resources = [
         ]
     },
     {
-        category: "KATEGORI 2",
-        text1: "CSS",
+        category: "CSS",
         text: "CSS står for Cascading StyleSheets, og brukes for å sette stilregler på HTML-elementer.",
         sources: [
             {
@@ -42,8 +40,7 @@ const resources = [
         ]
     },
     {
-        category: "KATEGORI 3",
-        text1: "JavaScript",
+        category: "Javascript",
         text: "JavaScript er et scriptspråk basert på EcmaScript. JavaScript kjører direkte i nettleseren, og brukes ofte til å manipulere HTML og CSS i webgrensnesnitt.",
         sources: [
             {
@@ -61,8 +58,7 @@ const resources = [
         ]
     },
     {
-        category: "KATEGORI 4",
-        text1: "React",
+        category: "React",
         text: "React er et rammeverk bygget i JavaScript. React bruker komponenter og states for å lage en levende frontend.",
         sources: [
             {
@@ -80,8 +76,7 @@ const resources = [
         ]
     },
     {
-        category: "KATEGORI 5",
-        text1: "Sanity",
+        category: "Sanity",
         text: "Sanity er et headless CMS som står for innholdsadministrasjon. Innhold hentes inn i applikasjoner via GROQ-spørringer.",
         sources: [
             {
@@ -100,73 +95,25 @@ const resources = [
     },
 ]
 
-
 let Menu = ``;
 
+    /*Henter alle kategorier og lenker og sender de inn i menuInnhold*/
     resources.map((resources) => {
-        
-        let subMenu = ``;
+        let MenuInnhold = ``;
         resources.sources.forEach((item) => {
-          subMenu += `
+          MenuInnhold += `
         <li><a target="_blank" href=${item.url}>${item.title}</a></li>`;
-
         });
         
         Menu += `
         <seaction class="MenuItem">
         <button oneclick="Menu()">${resources.category}</button>
           <div class="open">
-          <p class="text1">${resources.text1}</p> 
           <p class="text">${resources.text}</p>
-          <ul class="subMenu">
-                ${subMenu}
-          </ul>
-          </div>
-      </seaction>`;
-   
+          <ul class="menuInnhold">${MenuInnhold}</ul>
+          </div></seaction>`;
       });
-     
-        menu.innerHTML = `
-    <ul>
       
-        ${Menu}
-    </ul>`;
-
-    /*let Menu = ``;
-
-resources.map((resources) => {
-    
-    let subMenu = ``;
-    resources.sources.forEach((item) => {
-      subMenu += `
-    <li><a target="_blank" href=${item.url}>${item.title}</a></li>`;
-
-    });
-    
-    Menu += `
-    <section class="MenuItem">
-    <button onclick="toggleMenu()">${resources.category}</button>
-      <div class="open">
-      <p class="text1">${resources.text1}</p> 
-      <p class="text">${resources.text}</p>
-      <ul class="subMenu">
-            ${subMenu}
-      </ul>
-      </div>
-  </section>`;
-
-});
-
-menu.innerHTML = `
-<ul>
-  
-    ${Menu}
-</ul>`;
-
-// Toggle menu function
-function toggleMenu() {
-  const menuItems = document.querySelectorAll('.MenuItem');
-  menuItems.forEach(item => {
-    item.classList.toggle('open');
-  });
-}*/
+        /*Implementerer kategoriene inn i html NAVen "Menu" */
+        menu.innerHTML = 
+        `<ul>${Menu}</ul>`;

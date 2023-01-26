@@ -46,9 +46,9 @@ nav{
 nav button{
 border-style: solid;
 text-decoration: none;
-border-bottom: 5px solid var(--aquablue);
+border-bottom: solid var(--aquablue);
 display: inline-block;
-padding: .5rem 1rem;
+padding: .75rem 2rem;
 text-transform: uppercase;
 }
 
@@ -56,12 +56,12 @@ text-transform: uppercase;
 nav button:hover{
     color: var(--white);
     border-color: var(--aquablue);
-    border-bottom: var(--aquablue);
+    border-bottom: 5px solid var(--aquablue);
     background: var(--aquablue);
     transition: ease-in-out .4s;
 }
 
-#subMenu{
+#menuInnhold{
     display: flex;
     flex-direction: column;
 }
