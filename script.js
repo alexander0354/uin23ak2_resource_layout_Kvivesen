@@ -101,7 +101,7 @@ const resources = [
 ]
 
 
-/*let Menu = ``;
+let Menu = ``;
 
     resources.map((resources) => {
         
@@ -130,9 +130,9 @@ const resources = [
     <ul>
       
         ${Menu}
-    </ul>`;*/
+    </ul>`;
 
-    let menu = document.querySelector('#menu');
+    /*let menu = document.querySelector('#menu');
     let Menu = ``;
     
     resources.map((resources) => {
@@ -156,4 +156,4 @@ const resources = [
     menu.innerHTML = `
         <ul>
             ${Menu}
-        </ul>`;
+        </ul>`;*/
