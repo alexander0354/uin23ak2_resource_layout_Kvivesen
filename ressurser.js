@@ -97,20 +97,22 @@ const resources = [
 
 let Menu = ``;
 
-    /*Henter alle kategorier og lenker og sender de inn i menuInnhold*/
+    /*Henter alle kategorier og lenker og sender de inn i menuContent*/
     resources.map((resources) => {
-        let MenuInnhold = ``;
+        /*Henter hver av menu kategorienes innhold */
+        let menuContent = ``;
+        /*loop igjennom resources, henter alle kilder og legger inn i HTML*/
         resources.sources.forEach((item) => {
-          MenuInnhold += `
-        <li><a target="_blank" href=${item.url}>${item.title}</a></li>`;
+          menuContent += 
+          `<li><a target="_blank" href=${item.url}>${item.title}</a></li>`;
         });
-        
-        Menu += `
-        <seaction class="MenuItem">
+        /*Style for hvordan menu skal være satt opp */
+        Menu += 
+        `<seaction class="menuCategory">
         <button oneclick="Menu()">${resources.category}</button>
           <div class="open">
           <p class="text">${resources.text}</p>
-          <ul class="menuInnhold">${MenuInnhold}</ul>
+          <ul class="menuContent">${menuContent}</ul>
           </div></seaction>`;
       });
       

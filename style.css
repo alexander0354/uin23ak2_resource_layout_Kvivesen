@@ -1,8 +1,5 @@
 :root {
-    --red: #DA291C;
-    --yellow: #FFD700;
     --aquablue: #00FFFF;
-    --green: #00AF4D;
     --white: #FFFFFF;
     --black: #000000;
     --maxwidth: 1200px;
@@ -52,26 +49,19 @@ padding: .75rem 2rem;
 text-transform: uppercase;
 }
 
-/*hover*/
 nav button:hover{
     color: var(--white);
     border-color: var(--aquablue);
-    border-bottom: 5px solid var(--aquablue);
     background: var(--aquablue);
     transition: ease-in-out .4s;
 }
 
-#menuInnhold{
+#menuContent{
     display: flex;
     flex-direction: column;
 }
 
-div.open{
-    display: none;
-}
-
-/*hover*/
-.MenuItem:hover .open{
+.menuCategory:hover .open{
     position: fixed;
     top: auto;
     display: block;
@@ -80,32 +70,37 @@ div.open{
     width: 78%;
 }
 
+/*utgangspunkt ved oppstart av nettside*/
+div.open{
+    display: none;
+}
+
+/*Mobilversjon*/
 @media screen and (max-width: 800px) {
 
     #menu {  
         position: fixed;
-        right: 0;
+        right: 10px;
         left: auto;
         width: 100%;
-    }
-
+    }   
+    /*Button / onclick funksjon for telefon*/
     .nav button{
         color: var(--black);
         border-style: solid;
-        border-bottom: 1px solid var(--blue);
-        padding: .1rem 1rem;
+        border-bottom: 1px solid var(--aquablue);
+        padding: 1rem 1rem;
         text-transform: uppercase;
+        margin-bottom: 1rem;
         }
 
-        .MenuItem:hover .open{
+        .menuCategory:hover .open{
+            display: block;
             position: fixed;
             top: auto;
-            display: block;
-            left: 15px;
-            padding: 1rem;
+            left: 12px;
+            padding: 3rem;
             border-style: solid;
-            width: 85%;
-            border-top:5px solid var(--blue);
-
+            width: 80%;
         }
 }
