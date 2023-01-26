@@ -29,8 +29,7 @@ header{
     display: flex;
     justify-content: space-between;
     padding: 1rem;
-    border-style: groove;
-    
+    border-style: solid;
 }
 
 #menu {  
@@ -41,13 +40,13 @@ header{
 
 nav{
    position: relative;
-    left: 130px;
+    left: 107px;
     width: 100%;
     background-color: var(--with);
     display: flex;
 }
+
 nav button{
-color: var(--black);
 border-style: solid;
 text-decoration: none;
 border-bottom: 5px solid var(--aquablue);
@@ -57,11 +56,13 @@ text-transform: uppercase;
 }
 
 /*hover*/
-/*nav button:hover{
-    color: var(--black);
+nav button:hover{
+    color: var(--white);
     border-color: var(--aquablue);
+    border-bottom: var(--aquablue);
     background: var(--aquablue);
-}*/
+    transition: ease-in-out .4s;
+}
 
 #subMenu{
     display: flex;
@@ -73,16 +74,16 @@ div.open{
 }
 
 /*hover*/
-/*.MenuItem:hover .open{
+.MenuItem:hover .open{
     position: fixed;
     top: auto;
     display: block;
     padding: 1rem;
     border-style: solid;
     width: 75.54%;
-}*/
+}
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 800px) {
 
     #menu {  
         position: fixed;

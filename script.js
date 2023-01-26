@@ -103,7 +103,7 @@ const resources = [
 
 let Menu = ``;
 
-      resources.map((resources) => {
+    resources.map((resources) => {
         
         let subMenu = ``;
         resources.sources.forEach((item) => {
@@ -132,24 +132,6 @@ let Menu = ``;
         ${Menu}
     </ul>`;
 
-    const navItems = document.querySelectorAll('.nav-item');
-const categories = document.querySelectorAll('.category');
-
-navItems.forEach(item => {
-  item.addEventListener('click', e => {
-    // Get the index of the clicked navbar item
-    const navIndex = [...navItems].indexOf(item);
-
-    // Close all categories
-    categories.forEach(category => {
-      category.style.display = 'none';
-    });
-
-    // Open the corresponding category
-    categories[navIndex].style.display = 'block';
-  });
-});
-   
     /*let menu = document.querySelector('#menu');
     let Menu = ``;
     
